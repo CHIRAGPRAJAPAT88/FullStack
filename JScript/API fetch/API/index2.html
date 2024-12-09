@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card data in card format</title>
+</head>
+
+<body>
+    <div id="card"></div>
+
+    <script>
+
+        let dataCard = document.getElementById('card');
+
+        fetch('https://dummyjson.com/products')
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                data.products.forEach(value => {
+                    let div = document.createElement('div');
+                    div.className = 'card'
+                    div.style = 'height: 210px; background-color: lightblue; color: red ; margin: 10px; padding: 10px; border-radius: 10px; border: 1px solid black;'
+                    div.innerHTML = `
+                <h1>${value.id}</h1>
+                <h3>${value.title}</h3> 
+                <p>${value.description}</p>
+                <h5>${value.category}</h5> `
+                    dataCard.append(div);
+                });
+            });
+    </script>
+</body>
+
+</html>

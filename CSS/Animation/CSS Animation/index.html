@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .a {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            animation-name: box;
+            animation-duration: 6s;
+            /* animation-direction: reverse; */
+            position: relative;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes box {
+            /* from{background-color: red; top: 200px;}
+            to{background-color: green; top: 0px;} */
+
+
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                left: 200px;
+                top:0;
+            }
+            50% {
+                left: 200px;
+                top: 200px;
+            }
+            75% {
+                left: 0px;
+                top: 200px;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>

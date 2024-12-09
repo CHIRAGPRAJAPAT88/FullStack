@@ -1,0 +1,589 @@
+#wrapper, body, html {
+    height: auto;
+    width: 100%
+}
+
+.headerContent > h1, .headerContent > h2 {
+    text-transform: uppercase;
+    color: #000
+}
+
+.tabContainer  p {
+    font-family: Candara, sans-serif
+}
+
+.imageCaption > p, .innerList > a, .tabContainer > p {
+    font-family: Candara, sans-serif
+}
+
+body {
+    background-color: #fefee2
+}
+
+a.deskLogo:lang(en) {
+    background-image: url(clientlib-site/img/header/red-logo.png)
+}
+a.deskLogo:lang(hi) {
+    background-image: url(clientlib-site/img/header/red-logo-hi.png)
+}
+
+ul.menu {
+    border-bottom: 7px solid #ff016e
+}
+
+.breadCrumbTab, .header {
+    border-color: #ff016e
+}
+
+.line {
+    background-color: #ff016e !important
+}
+
+.innerBreadCrumbs > a {
+    background-image: url(clientlib-site/img/common/breadCrumb-red.png);
+    color: #ff016e
+}
+
+.mainContent {
+    padding: 104px 0 0
+}
+
+.headerMasterBanner {
+    text-indent: -9999px;
+    width: 100%;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 0;
+    padding-bottom: 29.375%
+}
+
+.headerMasterBanner img {
+    width: 100%;
+    height: auto;
+    vertical-align: top
+}
+
+.headerContent {
+    width: 90%;
+    margin: 5% auto 0;
+    text-align: center
+}
+
+.headerContent > h1 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    background-image: url(clientlib-site/img/common/ping-star-img.png), url(clientlib-site/img/common/ping-star-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 .3em, right .3em;
+    display: inline-table;
+    padding: 0 50px;
+    background-size: 18px auto
+}
+
+.headerContent > h2 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: .5em
+}
+
+.aboutTab {
+    overflow: hidden;
+    margin-top: 5%
+}
+
+.tabs {
+    margin: 0 5%;
+    padding: 0 5%;
+    width: 80%;
+    float: left;
+    background-image: url(clientlib-site/img/about/pink-star.png), url(clientlib-site/img/about/pink-star.png), url(clientlib-site/img/about/tab-bg.jpg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 0 center, right center, center 0;
+    background-size: 20px auto, 20px auto, 70% 70px
+}
+
+.tabContainer > a.pdf_btn, .tabs li > a {
+    background-position: 0 0, right 0;
+    text-transform: uppercase;
+    text-decoration: none
+}
+
+.tabs li {
+    width: 20%;
+    height: 70px;
+    list-style: none;
+    float: left
+}
+
+.tabs li > a {
+    height: 70px;
+    padding: 0 24px;
+    display: block;
+    background-image: url(clientlib-site/img/about/left-curve.png), url(clientlib-site/img/about/right-curve.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    text-align: center;
+    color: #000
+}
+
+.tabs li > a > span {
+    display: block;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #e3e1ba
+}
+
+.tabs li > a.active {
+    background-image: url(clientlib-site/img/about/active-left-curve.png), url(clientlib-site/img/about/active-right-curve.png);
+    color: #fefee4
+}
+
+.tabs li > a.active > span {
+    background-color: #ee3a83
+}
+
+.tabContainer {
+    width: 80%;
+    height: auto;
+    margin: 1% 10% 0;
+    float: left
+}
+
+.imageLeft, .imageRight {
+    width: 49%;
+    position: relative
+}
+
+.imageLeft {
+    float: left;
+    margin: 10px 45px 15px 0
+}
+
+.imageRight {
+    float: right;
+    margin: 10px 0 15px 45px
+}
+
+.imageCenter {
+    width: 100%;
+    float: left;
+    margin: 0 0 15px;
+    position: relative
+}
+
+.imageCaption {
+    width: 90%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1em 5%;
+    text-align: center;
+    background-color: rgba(225, 225, 225, .5)
+}
+
+.imageCaption > p {
+    font-size: .9em;
+    color: #000
+}
+
+.imageLeft img, .imageRight img {
+    width: 100%;
+    height: auto;
+    vertical-align: top
+}
+
+.tabContainer > p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 2.2em;
+    color: #000
+}
+
+.tabContainer > p > a {
+    text-decoration: none;
+    color: #000
+}
+
+.tabContainer > p > a:hover {
+    color: #ccc
+}
+
+.tabContainer > a.pdf_btn {
+    height: 35px;
+    line-height: 35px;
+    display: inline-table;
+    padding: 0 18px;
+    background-image: url(clientlib-site/img/common/yellow-left.png), url(clientlib-site/img/common/yellow-right.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 35px, auto 35px;
+    color: #282421;
+    font-size: .9em;
+    margin-top: 1em
+}
+
+.tabContainer > a.pdf_btn span {
+    padding: 0 20px;
+    background-color: #efefd5;
+    display: block
+}
+
+.tabContainer > a.pdf_btn:hover {
+    background-image: url(clientlib-site/img/common/red-left.png), url(clientlib-site/img/common/red-right.png);
+    color: #fff
+}
+
+.tabContainer > a.pdf_btn:hover span {
+    background-color: #db006a
+}
+
+.tabContainer > .subHeader {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2%;
+    padding-top: 5%;
+    position: relative
+}
+
+.tabContainer > .subHeader img {
+    width: 100%;
+    height: auto;
+    vertical-align: top
+}
+
+.subHeaderCaption {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 15px 0 10px;
+    background-color: rgba(254, 254, 228, .85);
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+
+.subHeaderCaption > h3, .subTitleHeader > h4 {
+    line-height: 1.3em;
+    text-transform: uppercase;
+    background-image: url(clientlib-site/img/common/ping-star-img.png), url(clientlib-site/img/common/ping-star-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 .25em, right .25em;
+    display: inline-table;
+    background-size: auto 18px, auto 18px;
+    color: #000
+}
+
+.subHeaderCaption > h3 {
+    margin: 0 auto;
+    font-size: 1.5em;
+    padding: 0 50px
+}
+
+.tabContainer .subTitleHeader {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2%;
+    padding-top: 3%
+}
+
+.tabContainer > .subTitleHeader {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2%;
+    padding-top: 3%
+}
+
+
+.subTitleHeader > h4 {
+    margin: 0 auto;
+    font-size: 1.3em;
+    padding: 0 50px
+}
+
+.innerList, ul.listTab {
+    margin-top: 1em
+}
+
+ul.listTab {
+    width: 100%
+}
+
+.listTab li {
+    padding-left: 25px;
+    margin-bottom: 2em;
+    background: url(clientlib-site/img/common/bullet-icon.png) 0 .45em no-repeat
+}
+
+.innerList > a {
+    font-size: .9em;
+    line-height: 1.2em;
+    display: block;
+    clear: both;
+    padding-left: 15px;
+    margin-bottom: 1em;
+    background: url(clientlib-site/img/common/arrow-img.png) 0 .45em no-repeat;
+    background-size: 6px auto;
+    text-decoration: none;
+    color: #000
+}
+
+.innerList > a:hover {
+    text-decoration: underline;
+    color: #ee3a83
+}
+
+.listTab li > h1 {
+    font-family: TrajanProBold, serif;
+    font-size: 1em;
+    line-height: 1.7em
+}
+
+.listTab li > h1 > a {
+    text-decoration: none;
+    color: #000
+}
+
+.listTab li > h1 > a:hover {
+    text-decoration: underline;
+    color: #ee3a83
+}
+
+@media only screen and (max-width: 1640px) {
+    .headerContent > h1 {
+        background-position: 0 .4em, right .4em
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .imageLeft, .tabs, .tabs li {
+        float: left
+    }
+    
+
+    .mainContent {
+        padding: 50px 0 0
+    }
+
+    .headerContent > h1 {
+        font-size: 2em;
+        padding: 0 60px;
+        background-size: auto 20px, auto 20px
+    }
+
+    .headerContent > h2 {
+        font-size: .9em
+    }
+
+    .tabs {
+        margin: 0 5%;
+        padding: 0;
+        width: 90%;
+        background: 0 0
+    }
+
+    .tabs li {
+        width: 48%;
+        height: 70px;
+        list-style: none;
+        margin: .2em 1%
+    }
+
+    .imageLeft, .imageRight {
+        width: 100%;
+        margin: 0 0 1em;
+        position: relative
+    }
+
+    .imageRight {
+        float: right
+    }
+
+    .imageCaption > p {
+        font-size: .85em
+    }
+
+    .tabContainer {
+        margin-top: 5%
+    }
+
+    .tabContainer > p {
+        font-size: .9em
+    }
+     .tabContainer  p {
+            font-size: .9em
+        }
+    .subHeaderCaption > h3, .subTitleHeader > h4 {
+        font-size: 1em;
+        padding: 0 50px;
+        background-size: auto 12px, auto 12px
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .headerContent > h1 {
+        font-size: 1.5em;
+        padding: 0 30px;
+        background-size: auto 15px, auto 15px
+    }
+
+    .headerContent > h2, .imageCaption > p {
+        font-size: .8em
+    }
+
+    .tabContainer {
+        margin-top: 10%
+    }
+
+    .imageCaption {
+        width: 96%;
+        padding: .5em 2%
+    }
+
+    .subHeaderCaption > h3, .subTitleHeader > h4 {
+        font-size: .9em;
+        padding: 0 20px;
+        background-size: auto 12px, auto 12px
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .tabs li > a, .tabs li > a.active, .tabs li > a > span {
+        height: 40px;
+        line-height: 40px
+    }
+
+
+    .mainContent {
+        padding: 40px 0 0
+    }
+
+    .headerContent > h1 {
+        font-size: 1.5em;
+        padding: 0 30px;
+        background-size: auto 15px, auto 15px
+    }
+
+    .headerContent > h2, .tabContainer > p, .tabs li > a, .tabContainer  p {
+        font-size: .8em
+    }
+
+    .tabs li {
+        height: 40px;
+        list-style: none;
+        float: left
+    }
+
+    .tabs li > a {
+        padding: 0 13px;
+        margin-top: 0
+    }
+
+    .tabs li > a.active {
+        font-size: .8em
+    }
+
+    .tabs li > a > span {
+        display: block;
+        width: 100%;
+        background-color: #e3e1ba
+    }
+
+    .tabContainer > a.pdf_btn {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        background-size: auto 30px, auto 30px;
+        font-size: .9em;
+        margin-top: 1em
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .headerContent > h1 {
+        font-size: 1.2em
+    }
+
+    .headerContent > h2 {
+        font-size: .8em
+    }
+
+    .subHeaderCaption > h3, .subTitleHeader > h4 {
+        font-size: .85em;
+        background-size: auto 10px, auto 10px
+    }
+}
+
+.footerTab {
+    width: 90%;
+    margin: 5% 0 0;
+    padding: 7% 5% 10%;
+    background-color: #f4f4d3;
+    background-image: url(clientlib-site/img/common/bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center 10em;
+    background-size: 42% auto;
+    overflow: hidden;
+    border-top: 4px solid #ff016e
+}
+
+
+/*18th May*/
+.tabContainer  p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 2.2em;
+    color: #000
+}
+
+.tabContainer  p  a {
+    text-decoration: none;
+    color: #000
+}
+
+.tabContainer  p  a:hover {
+    color: #ccc
+}
+
+.tabContainer  .subHeader {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2%;
+    padding-top: 5%;
+    position: relative
+}
+
+.tabContainer  .subHeader img {
+    width: 100%;
+    height: auto;
+    vertical-align: top
+}
+
+
+.listTab li a {
+    font-family: TrajanProBold, serif;
+    font-size: 1em;
+    line-height: 1.7em
+}
+
+.listTab li a {
+    text-decoration: none;
+    color: #000
+}
+
+.listTab li a:hover {
+    text-decoration: underline;
+    color: #ee3a83
+}
+
+.tab-component .tabs{
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.subTitleHeader {
+     background-color: rgba(254, 254, 228, .85);
+     padding: 15px 0 15px;
+     margin-top: 10px;
+}
+

@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.box {
+    /* background-color: aqua; */
+    width: 70%;
+    height: 37px;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    /* border: 3px solid red; */
+    margin: 0px auto 0 auto;
+}
+
+.box .logo {
+    color:darkblue;
+    font-size: 32px;
+}
+
+.box .logo span {
+    color:#d3d3f9;
+    font-size: 32px;
+    align-items: center;
+}
+
+.box .links {
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    height: 37px;
+}
+
+.box .links a {
+    text-decoration: none;
+    color:blue;
+    font-size: 13px;
+    gap: 25px;
+}
+
+.box1 {
+    background:blue;
+    padding:18px;
+}
+
+.box1 .heading {
+    margin:auto;
+    width:71%;
+}
+
+.box1 .heading h1 {
+    color:#d3d3f9;
+    font-size:32px;
+}
+
+.leftbar {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.leftbar .links1 h3 {
+    color: darkblue;
+    width: 149px;
+}
+
+.leftbar .links1 h3 a {
+    text-decoration: none;
+}
+
+.leftbar .links1 ul {
+    list-style: none;
+}
+
+.leftbar .links1 ul li {
+    margin: 10px;
+    width: 100px;
+}
+
+.leftbar .links1 ul li a {
+    text-decoration: none;
+    color: blue;
+    line-height: 1.4em;
+    
+}
+
+.content h2 {
+    color: darkblue;
+}
+
+.content p {
+    color: gray;
+    font-size: 13px;
+    line-height: 2.0;
+}
+
+.main {
+    background-color: #d3d3f9;
+    color: blue;
+    display: flex; 
+    padding: 10px 0;
+}
+
+.main .new{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main .work {
+    margin-left: 25px;
+    width: 30%;
+}
+
+.main .work h2 {
+    color: darkblue;
+}
+
+.main .work h2 p {
+    color: blue;
+}
+
+.main .new .work p {
+    font-size: 13px;
+    line-height: 2.0;
+}
+
+.new::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.main::after {
+    content: "";
+    clear: both;
+}
+
+#footer {
+    text-align: center;
+    color: blue;
+    padding: 20px;
+    clear: both;
+}
+
+#footer a {
+    color: blue;
+    text-decoration: none;
+}

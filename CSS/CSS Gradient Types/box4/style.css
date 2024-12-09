@@ -1,0 +1,12 @@
+div {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   /* background-image: conic-gradient(red 40deg, red 140deg, white 140deg, white 3deg, 300deg, white 270deg, red 270deg); */
+   background-image: conic-gradient( red 0deg, red 20deg , white 20deg, white 40deg, blue 40deg, blue 60deg, white 60deg,  80deg, red 80deg, red 100deg, white 100deg, white 120deg, blue 120deg, blue 140deg , white 140deg,  180deg, red 180deg, );
+}

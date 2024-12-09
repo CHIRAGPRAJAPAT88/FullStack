@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    background: #151320;
+}
+
+div {
+    width: 300px;   
+    height: 300px;
+    border: 1px solid white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background: radial-gradient(#fd004c 20%, #fe9000  20%, #fe9000 40%, #fff020 40%, #fff020 60%, #00c2fe 60%, #00c2fe 80%, #fb00fd 80%);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 0px 30px;
+            gap: 30px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="facts"></div>
+
+    <script>
+        let dataFact = document.getElementById('facts');
+
+        async function getData() {
+            let res = await fetch('https://cat-fact.herokuapp.com/facts')
+            let jsonRes = await res.json()
+            console.log(jsonRes)
+
+            jsonRes.forEach((fact) => {
+                let div = document.createElement('div');
+                div.style = 'background-color: green; border: 2px solid black; text-align: center; color: white; width:300px;'
+                div.innerHTML = `
+                <h3>${fact._id}</h3>
+                <p>${fact.user}</p>
+                <p>${fact.text}</p>
+                
+                `
+                dataFact.append(div)
+            })
+
+        }
+        getData()
+    </script>
+    
+</body>
+</html>

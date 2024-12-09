@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversing Counting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="timer"></div>
+    <button id="btnStart">Start</button>
+    <button id="btnCancel">Cancel</button>
+
+    <script>
+
+        let btnStart = document.getElementById('btnStart');
+        let btnCancel = document.getElementById('btnCancel');
+
+        btnStart.addEventListener('click', start);
+        btnCancel.addEventListener('click', cancel);
+
+
+        let timer = document.getElementById('timer');
+
+
+        function start() {
+            let i = 10;
+            function countdown() {
+                timer.innerHTML = i;
+                i--;
+                if (i >= 0) {
+                    setTimeout(countdown, 1000);
+                } else {
+                    alert('Countdown Complete');
+                }
+            }
+            countdown();
+        }
+
+        function cancel() {
+            clearTimeout(timer);
+            alert('Countdown Canceled');
+        }
+    </script>
+</body>
+
+</html>

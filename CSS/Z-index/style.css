@@ -1,0 +1,46 @@
+.box {
+    position: relative;
+    /* border: 4px solid gray; */
+    /* width: 500px;
+          height: 500px;
+          left: 100px;
+          top: 100px; */
+}
+
+.One {
+    background-color: red;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+}
+
+.Two {
+    background-color: green;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 80px;
+    left: 80px;
+    z-index: 2;
+}
+
+.Three {
+    background-color: yellow;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 160px;
+    left: 160px;
+    z-index: 3;
+}
+
+.forth {
+    background-color: blue;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 240px;
+    left: 240px;
+    z-index: 4;
+}

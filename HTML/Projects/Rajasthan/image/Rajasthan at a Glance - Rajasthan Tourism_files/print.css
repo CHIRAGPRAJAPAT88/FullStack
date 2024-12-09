@@ -1,0 +1,160 @@
+* { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; font: 12px Arial, Helvetica, sans-serif; max-width: 100% !important; }
+
+@media print {
+  body {
+     -webkit-print-color-adjust: exact;
+	zoom: 90%
+  }
+
+}
+@page {
+    size:A4 landscape;
+    -webkit-print-color-adjust: exact;
+}
+
+
+
+.header { width: 100%; height: 104px;}
+
+a.deskLogo { text-indent: inherit;}
+.main .page, .wrapper, body, html { position: static !important; display: block; height: auto !important;}
+
+.headerPanel1 .panelLeft { float: left !important; width: 50%;}
+.headerPanel1 .panelLeft .menu1 { float: left !important;}
+.headerPanel1 .panelLeft ul li { float: left; padding-left: 10px;}
+.headerPanel1 .panelLeft ul li a { color: #000; float: left;  text-decoration: none !important;}
+.headerPanel1 .panelRight ul.menu1 li a.toggleTab { text-decoration: none;}
+
+.headerPanel1 .panelRight  { float: right; }
+
+.headerPanel1 .panelRight ul li { float: left; padding-right: 10px;}
+.headerPanel1 .panelRight ul li a {  }
+a.deskLogo { margin-top: 20px; }
+
+.headerPanel1  { width: 100%; display: inline-block; min-height: 30px;}
+.headerPanel  { width: 100%;  display: inline-block; clear: both; border-bottom: 4px solid rgb(255, 1, 110)}
+
+
+.headerPanel .panelLeft { float: left; width: 50%;}
+.headerPanel .panelLeft #topmenu_color{ float: right ; width: 100%; padding: 0;}
+
+.headerPanel .panelLeft ul, .headerPanel .panelRight ul { border: none !important;}
+.headerPanel ul li { float: left;}
+.headerPanel ul li a { color: #000; text-decoration: none; font-size: 11px;}
+
+.headerPanel .panelLeft ul li a { padding-left: 10px;}
+.headerPanel .panelRight ul li a { padding-right: 10px;}
+
+.headerPanel{
+	height: 64px;
+}
+.headerPanel1{
+	height: 40px;
+}
+
+
+.headerPanel .panelRight { float: right; width: 50% }
+
+
+.headerPanel .panelRight ul.menu { float: right; }
+
+
+.headerPanel .panelRight ul.menu li a { font-size: 11px;}
+.headerPanel .panelRight ul.menu li ul { display: none;}
+.searchTab.deskSerach { margin-top: -40px; position: absolute; right: 150px; }
+
+.headerPanel #topmenu_color li ul { display: none;}
+
+ul.veiwList{
+	width: inherit;
+}
+.videoGalleryTab{
+	width: 90% !important;
+    margin-right: 5% !important;
+    margin-left: 5% !important;
+}
+
+
+
+.slick-slide{
+	display: none !important;
+}
+
+.slick-slide.slick-active{
+	display: block !important;
+    width: 172px !important;
+}
+
+.slides-navigation{
+	display: none;
+}
+
+ul.slides-container{
+	width: inherit !important;
+}
+
+script, style { 
+    display:none; 
+}
+div {
+    page-break-inside:avoid;
+}
+
+
+.rowOne > ul li:nth-child(2){
+
+    list-style-image: url("/content/dam/rajasthan-tourism/english/homepage/slider2/desk/bg_02_02.jpg") !important;
+    list-style-position: inside;
+    transform: scale(0.5) translate(-50%, -45%);
+
+
+}
+.rowOne > ul li:nth-child(3){
+
+    display: list-item;
+    list-style-image: url("/content/dam/rajasthan-tourism/english/homepage/slider2/desk/bg_03_03.jpg") !important;
+    list-style-position: inside;
+    transform: scale(0.615,0.5) translate(-45%, -45%);
+
+}        
+
+
+.rowTwo > ul li:nth-child(1){
+
+    display: list-item;
+    list-style-image: url("/content/dam/rajasthan-tourism/english/homepage/slider2/desk/bg_04_04.jpg") !important;
+    list-style-position: inside;
+    transform: scale(0.7,0.5) translate(-50%, -45%);
+
+}
+
+.rowTwo > ul li:nth-child(2){
+
+    display: list-item;
+    list-style-image: url("/content/dam/rajasthan-tourism/english/homepage/slider2/desk/bg_05_05.jpg") !important;
+    list-style-position: inside;
+    transform: scale(0.6,0.5) translate(-57%, -45%);
+
+}
+
+.rowTwo > ul li:nth-child(3){
+
+    display: list-item;
+    list-style-image: url("/content/dam/rajasthan-tourism/english/homepage/slider2/desk/bg_06_06.jpg") !important;
+    list-style-position: inside;
+    transform: scale(0.62,0.5) translate(-57%, -45%);
+
+}   
+
+
+
+
+.rowTwo, .rowOne{
+	height: 250px !important;
+}
+
+
+.centerStar{
+	left: 46% !important;
+    top: 50% !important;
+}

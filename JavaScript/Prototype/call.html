@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+</head>
+<body>
+    
+    <script>
+        // 1. call - it is used to call a function with arguments
+
+
+        // let person = {
+        //     name: 'Ram',
+        //     age: 30
+
+        // }
+
+        // function hello() {
+        //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);   
+        // }
+
+        // hello.call(person);
+
+
+
+        let person = {
+            name: 'Chirag',
+            age: 24,
+
+            hello: function() {
+                console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+            }
+        }
+
+        let person2 = {
+            name: 'Pritam',
+            age: 22
+        }
+
+
+        person.hello.call(person2);
+
+    </script>
+</body>
+</html>

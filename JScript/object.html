@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object is a collection of key value pair
+        let person = {
+            name : "Abhishek",
+            age : 23,
+            gender : "male",
+            city : "Delhi",
+            marks : [34,23,45,56,67],
+            "address" : {
+                city : "Delhi",
+                state : "Delhi"
+            },
+            show:function(){
+                document.write(6+8);
+                // document.write(this.name,5);
+            }
+        }
+        //dot notation
+        // document.write(person.age)
+        // document.write(person.marks[2])
+        // document.write(person.address.city)
+        // person.show();
+        //square notation
+        // let a="name"
+        // let b="show"
+        // document.write(person['address'].city)
+        // document.write(person[a])
+        // person[b]()
+        // for (const i in person) {
+        //    document.write(person[i] + "<br>");
+        // }
+        // document.write(Object.keys(person))
+        // document.write(Object.values(person))
+        // for(let i of Object.keys(person)){
+        //     document.write(i + "<br>");
+        // }
+        person.fname = "Chirag";
+        // person.name='chirag kumar';
+        document.write(person.name);
+        
+    </script>
+</body>
+</html>

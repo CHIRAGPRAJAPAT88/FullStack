@@ -1,0 +1,7 @@
+CSS Animation
+
+> @keyframes
+> animation-name
+> animation-duration
+> animation-direction
+> animation-iteration-count

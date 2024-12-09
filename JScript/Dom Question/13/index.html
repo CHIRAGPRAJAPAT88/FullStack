@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* transition: width 0.5s, height 0.5s; */  /* Smooth transition */
+           transition:  width 0.5s, height 0.5s, background-color 0.55s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <!-- <script>
+        const box = document.getElementById('box');
+        let growing = true; // Flag to indicate if the box is growing
+
+        function changeSize() {
+            const currentWidth = box.offsetWidth;
+            const currentHeight = box.offsetHeight;
+
+            if (growing) {
+                box.style.width = (currentWidth + 20) + 'px';
+                box.style.height = (currentHeight + 20) + 'px';
+
+                if (currentWidth >= 300) {
+                    growing = false; // Start shrinking if it reaches max size
+                }
+            } else {
+                box.style.width = (currentWidth - 20) + 'px';
+                box.style.height = (currentHeight - 20) + 'px';
+
+                if (currentWidth <= 100) {
+                    growing = true; // Start growing again if it reaches min size
+                }
+            }
+
+            requestAnimationFrame(changeSize); // Continue the animation
+        }
+
+        // Start the size changing animation
+        changeSize();
+
+    </script> -->
+<!-- <script>
+    const box = document.getElementById('box');
+let growing = true; // Flag to indicate if the box is growing
+
+function changeSizeAndColor() {
+    const currentWidth = box.offsetWidth;
+    const currentHeight = box.offsetHeight;
+
+    if (growing) {
+        box.style.width = (currentWidth + 20) + 'px';
+        box.style.height = (currentHeight + 20) + 'px';
+        box.style.backgroundColor = `rgb(${Math.min(255, currentWidth)}, 0, 0)`; // Color changes to more green as it grows
+
+        if (currentWidth >= 300) {
+            growing = false; // Start shrinking if it reaches max size
+        }
+    } else {
+        box.style.width = (currentWidth - 20) + 'px';
+        box.style.height = (currentHeight - 20) + 'px';
+        box.style.backgroundColor = `rgb(${Math.min(255, currentWidth)}, 0, 0)`; // Revert color back to red
+
+        if (currentWidth <= 100) {
+            growing = true; // Start growing again if it reaches min size
+        }
+    }
+    
+    requestAnimationFrame(changeSizeAndColor); // Continue the animation
+}
+
+// Start the size and color changing animation
+changeSizeAndColor();
+
+</script> -->
+<script>
+    const box = document.getElementById('box');
+let growing = true; // Flag to indicate if the box is growing
+let colorIndex = 0; // Color index for cycling through colors
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']; // Array of colors
+
+function changeSizeAndColor() {
+    const currentWidth = box.offsetWidth;
+    const currentHeight = box.offsetHeight;
+
+    if (growing) {
+        box.style.width = (currentWidth + 20) + 'px';
+        box.style.height = (currentHeight + 20) + 'px';
+
+        // Update color
+        box.style.backgroundColor = colors[colorIndex];
+        colorIndex = (colorIndex + 1) % colors.length; // Cycle through colors
+
+        if (currentWidth >= 300) {
+            growing = false; // Start shrinking if it reaches max size
+        }
+    } else {
+        box.style.width = (currentWidth - 20) + 'px';
+        box.style.height = (currentHeight - 20) + 'px';
+
+        // Update color
+        box.style.backgroundColor = colors[colorIndex];
+        colorIndex = (colorIndex + 1) % colors.length; // Cycle through colors
+
+        if (currentWidth <= 100) {
+            growing = true; // Start growing again if it reaches min size
+        }
+    }
+    
+    requestAnimationFrame(changeSizeAndColor); // Continue the animation
+}
+
+// Start the size and color changing animation
+changeSizeAndColor();
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: #ffffff;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 80%;
+        }
+
+        .text1 {
+            width: 30%;
+            height: 100%;   
+        }
+
+        .text2 {
+            width: 30%;
+            height: 100%;   
+        }
+
+        .text3 {
+            width: 30%;
+            height: 100%;
+        }
+
+        .text1 h5 {
+            color: #000;
+            font-weight: 400;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .text1 h1 {
+            font-size: 30px;
+            color: #000;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .text1 p {
+            color: #000;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .text1 .price-color {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            gap: 20px;
+        }
+
+        /* .price {
+            background: #d31a1a;
+        } */
+
+        .price h5 {
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .price h1 {
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .text1 .color {
+            /* background-color: #d31a1a; */
+            width: 100%;
+            gap: 20px;
+        }
+        /* .color h5 {
+            
+        } */
+
+        .text1 .color label {
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .text1 .color input {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .text1 .button01 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .text1 .button01 button {
+            width: 100%;
+            height: 40px;
+            background: #535353;
+            border: none;
+            color: #ffffff;
+            font-weight: 400;
+            margin-right: 10px;
+        }
+
+        .text1 .button01 button:hover {
+            background: #000000;
+            color: #c7c7c7;
+        }
+
+
+        .text2 img {
+            width: 350px;
+        }
+        
+        .text3 h2 {
+            color: #000000;
+            font-weight: 700;
+            margin-bottom: 20px;    
+        }
+
+        .safety {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+            gap: 0px;
+        }
+
+        .safety i {
+            color: #000000;
+            /* font-weight: 400; */
+            font-size: 40px;
+        }
+
+        .safety li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .safety li a {
+            color: #000000;
+            font-weight: 400;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .safety li h3 {
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .safety li p {
+            color: #000000;
+            font-weight: 400;
+        }   
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="text1">
+                <h5>CONVERTIBLE CAR SEATS</h5>
+                <h1>Better Stability and <span>Strength</span>to Absorb the shock</h1>
+                <p>Sell globally in minutes with localized currencies, languages, and experiences in every market.</p>
+                <div class="price-color">
+                    <div class="price">
+                        <h5>Price</h5>
+                        <h1>$125.75</h1>
+                    </div>
+                    <div class="color">
+                        <h5>Color</h5>
+                        <label for="color"></label>
+                        <input type="radio" name="color" id="color">
+                        <input type="radio" name="color" id="color">
+                        <input type="radio" name="color" id="color">
+                    </div>
+                </div>
+                <div class="button01">
+                    <button>ADD TO CART</button>
+                    <button>View Details</button>
+                </div>
+            </div>
+            <div class="text2">
+                <img src="img/baby car1.png" alt="">
+            </div>
+            <div class="text3">
+                <h2>Safety Certified</h2>
+                <ul class="safety">
+                    <i class="fa-solid fa-child"></i>
+                    <li><a href="">Age Group</a>
+                        <h3>0-7 Yrs</h3>
+                    </li>
+                    <i class="fa-solid fa-weight-scale"></i>
+                    <li><a href="">Weight Capacity</a>
+                        <h3>0-25 Kgs</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

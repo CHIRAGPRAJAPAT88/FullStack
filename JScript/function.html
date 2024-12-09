@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function is a block of code that performs a particular task which only runs when it is called
+
+        function greet(){//function declaration
+            console.log("hello");
+        }
+        greet();//function call
+        //no argument no return type
+        //function with argument and no return type
+        function greet1(name){
+            console.log("hello "+name);
+        }
+        greet1("sunil");
+        greet1("kumar");
+
+        //function with argument and return type
+        function greet2(name){
+            return "hello "+name;
+        }
+        console.log(greet2("sunil"));
+        let x=greet2("kumar");
+        console.log(x);
+        //in js all functions are first class citizen
+        //type of function
+        //1. function declaration
+        //it can be hoisted
+        //it has own this keyword
+        //2. function expression
+        //it can not be hoisted
+        //it have own this keyword
+        //3. arrow function
+        //it can not be hoisted
+        //it does not have own this keyword
+        let greet3 = function(name){
+            return "hello "+name;
+        }
+        console.log(greet3("sunil"));
+        // let add=(a,b)=>{
+        //     return a+b ;
+        // }
+        let add=(a,b)=>a+b ;
+        let cube=(a)=>a**3;
+        //iife imediately invoked function expression
+        (function(){
+            console.log("hello");
+        })()
+        //callback function =>
+        function multiplyBy5AndOtherOperation(n,fn){
+            let m=5*n
+            return fn(m)
+        }
+        console.log(multiplyBy5AndOtherOperation(2,cube));
+        console.log(multiplyBy5AndOtherOperation(3,function(a){return a*a}));
+        console.log(multiplyBy5AndOtherOperation(6,a=>a+10));
+        console.log(add(10,20));
+    </script>
+</body>
+</html>

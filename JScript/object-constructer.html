@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // function Person(first , last , age){
+        //     this.firstName =  first;
+        //     this.lastName = last ;
+        //     this.age = age;
+        // }
+
+        // let person = new Person ("Ram" , "kumar" , 40 );
+
+        // console.log(person);
+
+
+        function Person(name, tech){
+            this.name = name;
+            this.tech = tech;
+
+            this.introduce = function(){
+                console.log(`Hi, I am ${this.name} and I love ${this.tech}`);
+            }
+        }
+
+        let person1 = new Person("Chirag" , "Javascript");
+
+        let person2 = new Person("Ram" , "Python"); 
+
+        // console.log(person2);
+        console.log(person1);
+
+        person1.introduce();
+
+    </script>
+</body>
+</html>

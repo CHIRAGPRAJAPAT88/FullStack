@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+h4 {
+    color: orangered;   
+}
+
+h1 {
+    color: black;
+    margin: 10px 0;
+
+}
+
+.grid-container {
+    padding: 40px 10%;
+    display: grid;
+    /* background-color: gray;
+    border-radius: 50px;
+    border: 1px solid red; */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.card{
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: blue;
+    text-align: center;
+}
+
+.card h2 {
+    padding-top: 10px;
+    color: white;
+}
+
+.card img {
+    width: 200px;   
+    height: auto;
+    border-radius: 20px;
+    padding-top: 8px;
+    position: relative;
+}
+
+

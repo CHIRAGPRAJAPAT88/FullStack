@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#timer {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+Button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#stopButton {
+    background-color: #FF9800;
+    color: #fff;
+}
+
+#resetButton {
+    background-color: #E74C3C;
+    color: #fff;
+}

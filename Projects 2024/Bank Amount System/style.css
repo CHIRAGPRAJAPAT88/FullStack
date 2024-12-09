@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 121, 118, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+h1 {
+    font-size: 50px;
+    padding: 10px
+}
+
+h1 img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+h1 span {
+    color: #ec4a4a;
+}
+
+.container {
+    background-color: #fff;
+    color: #000;
+    border-radius: 6px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main h2 {
+    font-size: 30px;
+    color: #000;
+}
+
+.balance {
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.transactions {
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.transactions h2 {
+    font-size: 20px;
+    color: #000;
+}
+
+.transactions ul {
+    list-style: none;
+}
+
+.menagement {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #003f55;
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menagement input {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 25px;
+}
+
+.menagement button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menagement button:hover {
+    background-color: #ec4a4a;
+    color: #fff;
+}
+
+

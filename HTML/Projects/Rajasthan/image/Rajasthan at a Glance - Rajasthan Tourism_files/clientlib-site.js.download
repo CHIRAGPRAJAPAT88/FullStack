@@ -1,0 +1,721 @@
+function gotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+        }
+
+function facbook() {
+   return window.open ("http://jsc.simfatic-solutions.com","mywindow","status=1");
+
+        // return true or false, depending on whether you want to allow the `href` property to follow through or not
+    }
+
+
+function facbookshare() {
+    var i = "Visit Rajasthan #MySthan",
+        t = "Situated amidst a stark desert and surrounded by the Aravallis, this state is a traveller's destination. Come witness the potpourri of the old and new and get a glimpse of the Land of Kings.",
+        e = document.location.origin + "/content/dam/rajasthan-tourism/english/city/attraction/share/DefaultAttractionShare.jpg",
+        o = document.location.origin, a = t, s = e, n = "", r = i, c = o, l = [{name: r, link: c}];
+    FB.ui({
+        method: "feed",
+        name: r,
+        link: "http://tourism.rajasthan.gov.in/",//update c
+        picture: "http://tourism.rajasthan.gov.in/admin/assets/ugc/city/attraction/share/DefaultAttractionShare.jpg", //update s
+        caption: " ",
+        description: a,
+        message: n,
+        actions: {
+            link:  "http://tourism.rajasthan.gov.in", name: "Visit Rajasthan #MySthan"
+        }    //update l  
+        }, function (i) {
+    })
+}
+function twitershare() {
+    var i = "The %23LandofKings - situated amidst the stark desert and surrounded by the Aravallis. Come discover your %23MySthan!";
+    i = i.replace("&", "%26");
+    var t = document.location.origin;
+    return window.open("https://twitter.com/share?text=" + i + "&url=" + t, "name", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=400, top=200, left=300"), window.focus && newwindow.focus(), !1
+}
+function rgb2hex(i) {
+    return i = i.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/), "#" + hex(i[1]) + hex(i[2]) + hex(i[3])
+}
+function hex(i) {
+    return isNaN(i) ? "00" : hexDigits[(i - i % 16) / 16] + hexDigits[i % 16]
+}
+var scrollcolor;
+$(window).load(function () {
+
+    $(".pageLoader").fadeOut("slow");
+
+    var myTheme =  localStorage.getItem('myTheme');//$.session.get("myTheme");
+    var fontsize = localStorage.getItem('fontsize');
+    $("body").css("font-size", fontsize+"%");
+
+    if(myTheme=="yellowTheme")
+        yellowTheme();
+    else if(myTheme=="greenTheme")
+        greenTheme();
+    else if(myTheme=="themeHighContrast")
+        themeHighContrast();
+
+}), $(function () {
+});
+var citymenu = function () {
+    $(".headerPanel .menu > li > a,.nav-dropdown").mouseover(function () {
+        var i, t = $(this).attr("aria-img");
+
+        var colorMap = [];
+        colorMap["orange-logo.png"] = "#ff8c0f";
+        colorMap["purpule-logo.png"] = "#8110eb";
+        colorMap["green-logo.png"] = "#26c7ba";
+        colorMap["red-logo.png"] = "#ff016e";
+        colorMap["green-message-board-logo.png"] = "#26c7ba";
+        colorMap["red-toggle-logo.png"] = "#ff016e";
+
+        i = colorMap[t];
+
+        $("a[aria-img]").each(function () {
+            var color = colorMap[$(this).attr("aria-img")];
+            $(this).css(":hover", "color:" + color);
+        });
+        var lang = document.getElementsByTagName('html')[0].getAttribute('lang');
+		if(lang=="hi"){
+			t= t.replace(".", "-hi.");
+    	}
+
+        $(".headerPanel .menu").css("border-bottom", "7px solid " + i), $(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/" + t + ")")
+    }), $(".level2 li").mouseover(function () {
+        var i = Math.round($(this).position().top / $(this).parent().height() * 100);
+        switch (Math.ceil(i / 10)) {
+            case 1:
+                $(this).find(".fourthLayer").css({"margin-top": "-15%", visibility: "visible", opacity: "1"});
+                break;
+            case 2:
+                $(this).find(".fourthLayer").css({"margin-top": "-36%", visibility: "visible", opacity: "1"});
+                break;
+            case 3:
+                $(this).find(".fourthLayer").css({"margin-top": "-58%", visibility: "visible", opacity: "1"});
+                break;
+            case 4:
+                $(this).find(".fourthLayer").css({"margin-top": "-70%", visibility: "visible", opacity: "1"});
+                break;
+            case 5:
+                $(this).find(".fourthLayer").css({"margin-top": "-71%", visibility: "visible", opacity: "1"});
+                break;
+            case 6:
+                $(this).find(".fourthLayer").css({"margin-top": "-71%", visibility: "visible", opacity: "1"});
+                break;
+            case 7:
+                $(this).find(".fourthLayer").css({"margin-top": "-71%", visibility: "visible", opacity: "1"});
+                break;
+            case 8:
+                $(this).find(".fourthLayer").css({"margin-top": "-115%", visibility: "visible", opacity: "1"});
+                break;
+            case 9:
+                $(this).find(".fourthLayer").css({"margin-top": "-115%", visibility: "visible", opacity: "1"});
+                break;
+            case 10:
+                $(this).find(".fourthLayer").css({"margin-top": "-135%", visibility: "visible", opacity: "1"})
+        }
+    }), $(".level2 li").mouseout(function () {
+        $(".fourthLayer").css({visibility: "hidden", opacity: "0"})
+    });
+
+
+    var i = [];
+    //$(".level2").each(function () {
+    $('#topmenu_color > li:nth-child(2) .level2').each(function () {
+        i.push($(this).attr("id"));
+    });
+    var CityVarDown, CityVartop;
+
+    jQuery.each(i, function (t) {
+        var e = $("#" + i[t]).find("ul").children("li"), o = 0, a = 0, s = 0, n = 0;
+        e.each(function (i) {
+            o += parseInt($(this).css("height")), s++
+        });
+        var r = parseInt($("#" + i[t]).find("ul").css("height")), c = parseInt(o) / parseInt(e.length);
+        $("#" + i[t] + " .down").mouseover(function () {
+            CityVarDown = setInterval(function () {
+                var o = parseInt($("#" + i[t]).find("ul").children("li").last().offset().top);
+                o >= r && (n += c, a++, e.each(function (i) {
+                    $(this).animate({top: "-" + n + "%"})
+                }))
+            }, 500)
+        }), $("#" + i[t] + " .top").mouseover(function () {
+            CityVartop = setInterval(function () {
+                a >= 0 && (n -= c, a--, e.each(function (i) {
+                    $(this).animate({top: "-" + n + "%"})
+                }))
+            }, 500)
+        }), $("#" + i[t] + " .down").mouseout(function () {
+            clearInterval(CityVarDown)
+        }), $("#" + i[t] + " .top").mouseout(function () {
+            clearInterval(CityVartop)
+        })
+    })
+}, ww = document.body.clientWidth, adjustMenu = function () {
+    if (950 >= ww) {
+        var i = $("html, body"), t = $(".headerPanel"), e = $(".menuIcon"), o = $(".has-dropdown");
+        e.on("click", function (e) {
+            var o = $(this);
+            e.preventDefault(), o.toggleClass("is-active"), t.toggleClass("is-visible"), i.toggleClass("nav-open")
+        }), o.on("click", function () {
+            var i = $(this);
+            i.toggleClass("is-active").children("ul").toggleClass("is-visible")
+        }), o.on("click", "*", function (i) {
+            i.stopPropagation()
+        });
+        var a = $(window).height();
+        $(".headerPanel").css("height", a - 43)
+    } else citymenu()
+};
+$(document).ready(function () {
+    adjustMenu(), $(".shareIcon").css("opacity", "0"), $(".deskShareTab").mouseover(function () {
+        $(".shareIcon").css("opacity", "1")
+    }), $(".deskShareTab").mouseout(function () {
+        $(".shareIcon").css("opacity", "0")
+    });
+    var i = 0;
+    $(".deviceShareTab a img").click(function () {
+        0 == i ? ($(".shareIcon").css("opacity", "1"), i = 1) : ($(".shareIcon").css("opacity", "0"), i = 0)
+    })
+});
+var scrollBar = function () {
+    var i = $(window).width();
+}, hexDigits = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
+$(document).ready(function () {
+    setTimeout(function () {
+        //scrollcolor = $(".active").attr("aria-color"), scrollBar()
+    }, 1e3)
+});
+
+$(document).ready(function () {
+
+    //$("[rel=canonical]").attr("href", window.location.origin + window.location.pathname);
+
+    $('#overlaySubscribe').click(function () {
+        $('#subOverlay').fadeIn();
+    });
+    $('#clsButton').click(function () {
+        $('#subOverlay').fadeOut();
+    });
+    gotop();
+
+    var path = window.location.href;
+    var host_name = window.location.hostname;
+    var text1 = "हिन्दी";
+    var skipText = "Skip to Main Content";
+    var screenReaderText = "Screen Reader";
+    if(path.includes("/content/rajasthan-tourism/")){
+        if(path.includes("/hi/")){
+             path = path.replace("/hi/","/en/");
+             text1 = "English"
+             skipText = "Skip to Main Content";
+             screenReaderText = "Screen Reader";
+        }else if(path.includes("/en/")){
+             path = path.replace("/en/","/hi/")
+        }else if(path.includes("/hi.html")){
+              path = path.replace("/hi.html","/en.html");
+              text1 = "English";
+              screenReaderText = "Screen Reader";
+              skipText = "Skip to Main Content";
+        }else if(path.includes("/en.html")){
+              path = path.replace("/en.html","/hi.html");
+        }
+    }else if(path.includes("/hi/")){
+        path = path.replace("/hi/","/")
+        text1 = "English";
+        screenReaderText = "Screen Reader";
+        skipText = "Skip to Main Content";
+    }else if(path.includes("/hi.html")){
+        text1 = "English";
+        screenReaderText = "Screen Reader";
+        skipText = "Skip to Main Content";
+        path = path.replace("/hi.html","/");
+    }else{
+          if(path.includes(".html"))
+            path = path.replace(host_name,host_name+"/hi");
+        else
+            path = path.replace(host_name+"/",host_name+"/hi");
+    }
+
+    $(".headerPanel1 ul.menu1 li > a.toggleTab").attr("href",path);
+    $(".headerPanel1 ul.menu1 li > a.toggleTab").text(text1);
+    $(".headerPanel1 ul.menu1 li > a.skipcontent").text(skipText);
+    $(".headerPanel1 ul.menu1 li > a.screenreader").text(screenReaderText);
+	var cs = $(".breadcrumbs a:eq(1)").attr("href");
+    if(cs!=undefined && $(".breadcrumbs a:eq(1)").attr("href").includes("/experience.html")){
+        var ax = $(this);
+		$(".breadcrumbs a:eq(1)").hide();
+        $(".breadcrumbs a:eq(1)").next().hide();
+    }
+
+});
+
+
+"use strict";
+function fnsearch() {
+    var e = $("#searchMobile").val(), a = $("#search").val();
+    null == a || "" == a ? window.location.href = "/bin/rajasthan-tourism/search.html?q=" + e : window.location.href = "/bin/rajasthan-tourism/search.html?q=" + a
+}
+$(document).ready(function () {
+
+    var val1 = 12;
+    $( ".menu li a[href!='javascript:;']" ).each(function() {
+  		$( this ).attr( "tabindex", val1++ );
+	});
+
+
+    $( 'a[href*="forest.rajasthan.gov.in"]').each(function() {
+  		$( this ).attr( "rel", "nofollow noopener noreferrer" );
+	});
+    $( 'a[href*="bookrajmonuments.in"]').each(function() {
+  		$( this ).attr( "rel", "nofollow noopener noreferrer" );
+	});
+
+    $( 'a[href*="bioscope.rajasthan.gov.in"]').each(function() {
+  		$( this ).attr( "rel", "nofollow noopener noreferrer" );
+	});
+
+
+
+    $("#search").keyup(function (e) {
+        13 == e.keyCode && fnsearch()
+    }), $(".menu #navhome").removeClass("select"), $(".menu a#navdiscover").removeClass("active"), $(".menu a#navexp").removeClass("active"), $(".menu a#navplan").removeClass("active"), $(".menu a#navmyraj").removeClass("active"), $(".menu a#navabout").removeClass("active")
+});
+
+function authUser() {
+    function e(e) {
+        if (e && "connected" === e.status) {
+            {
+                e.authResponse.userID, e.authResponse.accessToken
+            }
+            getFBData()
+        } else;
+    }
+
+    FB.login(e, {scope: "user_about_me"})
+}
+function getFBData() {
+    var e = 0, t = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    FB.api("/rajasthantourism?fields=posts", function (a) {
+        $.each(a.posts.data, function (a, n) {
+            if (0 == e) {
+                $("#fb1").text(n.message);
+                var o = new Date(n.created_time), s = o.getDate(), i = o.getMonth();
+                i += 1, $("#date1").text(t[i] + " " + s)
+            } else if (1 == e) {
+                $("#fb2").text(n.message);
+                var o = new Date(n.created_time), s = o.getDate(), i = o.getMonth();
+                $("#date2").text(t[i] + " " + s)
+            }
+            e++
+        })
+    })
+}
+$(window).load(function (e) {
+    $(".rightCol").click(function (e) {
+        $(".main").moveTo(1)
+    }), $(".arrowDown").click(function (e) {
+        $(".main").moveDown(2)
+    })
+});
+
+
+
+function fontResize2(){
+
+     var fontsize = (parseFloat($("body").css("font-size"))*100/16);
+     if(fontsize>=88)
+        $("body").css("font-size", (fontsize-3)+"%");
+     localStorage.setItem('fontsize', (parseFloat($("body").css("font-size"))*100/16));
+}
+function fontReset(){
+    $("body").css("font-size", "100%");
+    localStorage.setItem('fontsize', (parseFloat($("body").css("font-size"))*100/16));
+}
+function fontResize1(){
+    var fontsize = (parseFloat($("body").css("font-size"))*100/16);
+         if(fontsize<=112)
+            $("body").css("font-size", (fontsize+3)+"%");
+    localStorage.setItem('fontsize', (parseFloat($("body").css("font-size"))*100/16));
+}
+
+function greenTheme(){
+    //$(".section").css("background-color","transparent");
+    $("body").addClass("green-theme").removeClass("black-theme").removeClass("yellow-theme");
+     $(".main").addClass("green-theme").removeClass("black-theme").removeClass("yellow-theme");
+    var match = "rgb(244, 244, 211)"; // match background-color: black
+    var match1 = "rgb(254, 254, 228)";
+    var match2 = "rgb(254, 254, 226)";
+    $("*").removeClass("black-theme-color");
+    $("*").removeClass("black-theme-nocolor");
+    $("*").removeClass("yellow-theme-color");
+    $('div').not( ".header" ).filter(function() {
+        var clr = $(this).css('background-color');
+        return (clr == match||clr == match1||clr == match2||$(this).hasClass("black-theme")||$(this).hasClass("yellow-theme"));
+
+    }).addClass("green-theme").removeClass("black-theme").removeClass("yellow-theme");
+    //$.session.set("myTheme", "greenTheme");
+    localStorage.setItem('myTheme', 'greenTheme');
+}
+
+function themeHighContrast(){
+    //$(".section").css("background-color","transparent");
+    $("body").addClass("black-theme").removeClass("green-theme").removeClass("yellow-theme");
+     $(".main").addClass("black-theme").removeClass("green-theme").removeClass("yellow-theme");
+    var match = "rgb(244, 244, 211)"; // match background-color: black
+    var match1 = "rgb(254, 254, 228)";
+    var match2 = "rgb(254, 254, 226)";
+    var matchclr = "rgb(0, 0, 0)";
+    var match3 = "rgb(233, 231, 208)";
+    $("*").removeClass("yellow-theme-color");
+
+    $('.headerContent :header, .headerContent p, .detailTab p, .detailTab :header, .tabContainer p, div.innerCol, .innerCol span, .innerCol p a').not(".innerList").not(".innerTitle *").addClass("black-theme-nocolor");
+
+    $('div').not( ".header" ).not( ".header *" ).filter(function() {
+        var clr = $(this).css('background-color');
+        return (clr == match||clr == match1||clr == match2||$(this).hasClass("green-theme")||$(this).hasClass("yellow-theme"));
+
+    }).addClass("black-theme").removeClass("green-theme").removeClass("yellow-theme");
+
+    $('*').not("body").not( ".header *" ).not("div").not("img").not("ul").not(".detailTab_plan *").not(".innerTitle *").not(".sectionForm *").filter(function() {
+            var clr1 =  $(this).css('color');
+            var clr = $(this).css('background-color');
+            var bodyfontsize = parseFloat($("body").css('font-size'));
+            var fontszie = parseFloat($(this).css('font-size'));
+            var sizeratio = parseFloat(fontszie*100/bodyfontsize);
+            return (sizeratio<=88 && ($(this).css('background-image') == 'none') && (clr1==matchclr&&!(clr == match||clr == match1||clr == match2)));
+
+    }).addClass("black-theme-color");
+
+    $('.page__footer').filter(function() {
+                var clr1 =  $(this).css('color');
+                var clr = $(this).css('background-color');
+                var bodyfontsize = parseFloat($("body").css('font-size'));
+                var fontszie = parseFloat($(this).css('font-size'));
+                var sizeratio = parseFloat(fontszie*100/bodyfontsize);
+        //if(!(clr == match||clr == match1||clr == match2||clr==match3)){
+			return (sizeratio>88);
+        //}
+    }).addClass("black-theme-nocolor");
+
+	$('*').not("body").not( ".header *" ).not("div").not("img").not("ul").filter(function() {
+            var clr1 =  $(this).css('color');
+            var clr = $(this).css('background-color');
+            var fontszie = parseInt($(this).css('font-size'));
+            return (clr=="rgb(38, 44, 51)");
+
+    }).addClass("black-theme-nocolor");
+    //$.session.set("myTheme", "themeHighContrast");
+    localStorage.setItem('myTheme', 'themeHighContrast');
+    //$("span").closest(".black-theme-nocolor").removeClass("black-theme-nocolor");
+}
+
+function yellowTheme(){
+   // $(".section").css("background-color","transparent");
+    $("body").addClass("yellow-theme").removeClass("green-theme").removeClass("black-theme");
+    $(".main").addClass("yellow-theme").removeClass("green-theme").removeClass("black-theme");
+    var match = "rgb(244, 244, 211)"; // match background-color: black
+    var match1 = "rgb(254, 254, 228)";
+    var match2 = "rgb(254, 254, 226)";
+     $("*").removeClass("black-theme-color");
+     $("*").removeClass("black-theme-nocolor");
+
+     $(":header, p, a, span, li").not( ".header *" ).not("ul.tabs *").not(".innerSlider *").addClass("yellow-theme-color");
+    $('div').not( ".header" ).not(".innerSlider *").filter(function() {
+        var clr = $(this).css('background-color');
+        return (clr == match||clr == match1||clr == match2||$(this).hasClass("green-theme")||$(this).hasClass("black-theme"));
+
+    }).addClass('yellow-theme').removeClass("green-theme").removeClass("black-theme");
+   // $.session.set("myTheme", "yellowTheme");
+    localStorage.setItem('myTheme', 'yellowTheme');
+    // Get saved data from sessionStorage
+
+}
+
+
+function resetTheme(){
+    $("body").removeClass("green-theme");
+    $("body").removeClass("black-theme");
+    $("body").removeClass("yellow-theme");
+    $(".main").removeClass("yellow-theme").removeClass("green-theme").removeClass("black-theme");
+     $("*").removeClass("black-theme-color");
+     $("*").removeClass("black-theme-nocolor");
+    $("*").removeClass("yellow-theme-color");
+     $('div').filter(function() {
+          return ($(this).hasClass("green-theme")||$(this).hasClass("black-theme")||$(this).hasClass("yellow-theme"))
+     }).removeClass("green-theme").removeClass("black-theme").removeClass("yellow-theme");
+     //$.session.set("myTheme", "standardTheme");
+    localStorage.setItem('myTheme', 'standardTheme');
+}
+
+
+//footer.html js
+function gotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+        }
+        function subscribeBlog() {
+
+            var semail = $("#toAddress").val();
+
+			var fad = $("#fromAddress").val();
+			var link = $("#templateLink").val();
+
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!semail.match(mailformat)) {
+                alert('Please provide a valid email address');
+                $("#semail").focus();
+                return false;
+            }
+
+            var fd = {};
+
+            fd["fromAddress"]= fad;
+            fd["toAddress"]= semail;
+            fd["templateLink"]= link;
+            $.ajax({
+
+               <!-- type: "POST",-->
+                url: "/bin/rajasthan-tourism/emailservlet.html",
+                data: fd,
+                success: function (data) {
+                    if (data == "true") {
+						alert("Thanks for Subscribing to the Rajasthan Tourism!");
+                    }else if (data == "duplicateid") {
+						alert("“You have already subscribed to Rajasthan Tourism!");
+                    }
+                    else {
+                        alert("please try again..");
+                    }
+                }
+            });
+        }
+
+
+//footer.html end js
+
+		function close(){
+			$('#popup').css("display","none");
+		}
+
+
+        function subscribe() {
+            var sname = $("#sname").val();
+            var semail = $("#semail").val();
+            if (sname == "" || sname == null) {
+                alert("Please enter your name");
+                $("#sname").focus();
+                return false;
+            }
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!semail.match(mailformat)) {
+                alert('Please provide a valid email address');
+                $("#semail").focus();
+                return false;
+            }
+            var scountry = document.getElementById("snationality").value;
+            if (scountry == "select") {
+                alert("Please select country");
+                $("#snationality").focus();
+                return false;
+            }
+            var fd = {};
+            fd["sname"]= sname;
+            fd["semail"]= semail;
+            fd["scountry"]= scountry;
+
+            $.ajax({
+                <!--type: "POST, GET",-->
+                url: "/bin/rajasthan-tourism/subscribe.html",
+                data: fd,
+                success: function (data) {
+                    if (data == "true") {
+                        //document.getElementById("divthankyou").style.display = "block";
+                        document.getElementById("subscribeForm_").style.display = "none";
+                    }
+                    else {
+                        alert("please try again..");
+                    }
+                }
+            });
+        }        
+!function (e, t) { "function" == typeof define && define.amd ? define(t) : "object" == typeof exports ? module.exports = t() : e.Blazy = t() }(this, function () { function e(e) { var o = e._util; o.elements = a(e.options.selector), o.count = o.elements.length, o.destroyed && (o.destroyed = !1, e.options.container && d(e.options.container, function (e) { l(e, "scroll", o.validateT) }), l(window, "resize", o.save_viewportOffsetT), l(window, "resize", o.validateT), l(window, "scroll", o.validateT)), t(e) } function t(e) { for (var t = e._util, o = 0; o < t.count; o++) { var n = t.elements[o], s = n.getBoundingClientRect(); (s.right >= v.left && s.bottom >= v.top && s.left <= v.right && s.top <= v.bottom || i(n, e.options.successClass)) && (e.load(n), t.elements.splice(o, 1), t.count--, o--) } 0 === t.count && e.destroy() } function o(e, t, o) { if (!i(e, o.successClass) && (t || o.loadInvisible || 0 < e.offsetWidth && 0 < e.offsetHeight)) if (t = e.getAttribute(p) || e.getAttribute(o.src)) { t = t.split(o.separator); var a = t[m && 1 < t.length ? 1 : 0], c = "img" === e.nodeName.toLowerCase(); if (c || void 0 === e.src) { var f = new Image, v = function () { o.error && o.error(e, "invalid"), r(e, o.errorClass), u(f, "error", v), u(f, "load", h) }, h = function () { if (c) { e.src = a, s(e, "srcset", o.srcset); var t = e.parentNode; t && "picture" === t.nodeName.toLowerCase() && d(t.getElementsByTagName("source"), function (e) { s(e, "srcset", o.srcset) }) } else e.style.backgroundImage = 'url("' + a + '")'; n(e, o), u(f, "load", h), u(f, "error", v) }; l(f, "error", v), l(f, "load", h), f.src = a } else e.src = a, n(e, o) } else "video" === e.nodeName.toLowerCase() ? (d(e.getElementsByTagName("source"), function (e) { s(e, "src", o.src) }), e.load(), n(e, o)) : (o.error && o.error(e, "missing"), r(e, o.errorClass)) } function n(e, t) { r(e, t.successClass), t.success && t.success(e), e.removeAttribute(t.src), d(t.breakpoints, function (t) { e.removeAttribute(t.src) }) } function s(e, t, o) { var n = e.getAttribute(o); n && (e[t] = n, e.removeAttribute(o)) } function i(e, t) { return -1 !== (" " + e.className + " ").indexOf(" " + t + " ") } function r(e, t) { i(e, t) || (e.className += " " + t) } function a(e) { var t = []; e = document.querySelectorAll(e); for (var o = e.length; o--; t.unshift(e[o])); return t } function c(e) { v.bottom = (window.innerHeight || document.documentElement.clientHeight) + e, v.right = (window.innerWidth || document.documentElement.clientWidth) + e } function l(e, t, o) { e.attachEvent ? e.attachEvent && e.attachEvent("on" + t, o) : e.addEventListener(t, o, !1) } function u(e, t, o) { e.detachEvent ? e.detachEvent && e.detachEvent("on" + t, o) : e.removeEventListener(t, o, !1) } function d(e, t) { if (e && t) for (var o = e.length, n = 0; o > n && !1 !== t(e[n], n) ; n++); } function f(e, t, o) { var n = 0; return function () { var s = +new Date; t > s - n || (n = s, e.apply(o, arguments)) } } var p, v, m; return function (n) { if (!document.querySelectorAll) { var s = document.createStyleSheet(); document.querySelectorAll = function (e, t, o, n, i) { for (i = document.all, t = [], e = e.replace(/\[for\b/gi, "[htmlFor").split(","), o = e.length; o--;) { for (s.addRule(e[o], "k:v"), n = i.length; n--;) i[n].currentStyle.k && t.push(i[n]); s.removeRule(0) } return t } } var i = this, r = i._util = {}; r.elements = [], r.destroyed = !0, i.options = n || {}, i.options.error = i.options.error || !1, i.options.offset = i.options.offset || 100, i.options.success = i.options.success || !1, i.options.selector = i.options.selector || ".b-lazy", i.options.separator = i.options.separator || "|", i.options.container = i.options.container ? document.querySelectorAll(i.options.container) : !1, i.options.errorClass = i.options.errorClass || "b-error", i.options.breakpoints = i.options.breakpoints || !1, i.options.loadInvisible = i.options.loadInvisible || !1, i.options.successClass = i.options.successClass || "b-loaded", i.options.validateDelay = i.options.validateDelay || 25, i.options.save_viewportOffsetDelay = i.options.save_viewportOffsetDelay || 50, i.options.srcset = i.options.srcset || "data-srcset", i.options.src = p = i.options.src || "data-src", m = 1 < window.devicePixelRatio, v = {}, v.top = 0 - i.options.offset, v.left = 0 - i.options.offset, i.revalidate = function () { e(this) }, i.load = function (e, t) { var n = this.options; void 0 === e.length ? o(e, t, n) : d(e, function (e) { o(e, t, n) }) }, i.destroy = function () { var e = this._util; this.options.container && d(this.options.container, function (t) { u(t, "scroll", e.validateT) }), u(window, "scroll", e.validateT), u(window, "resize", e.validateT), u(window, "resize", e.save_viewportOffsetT), e.count = 0, e.elements.length = 0, e.destroyed = !0 }, r.validateT = f(function () { t(i) }, i.options.validateDelay, i), r.save_viewportOffsetT = f(function () { c(i.options.offset) }, i.options.save_viewportOffsetDelay, i), c(i.options.offset), d(i.options.breakpoints, function (e) { return e.width >= window.screen.width ? (p = e.src, !1) : void 0 }), setTimeout(function () { e(i) }) } }); var bLazy = new Blazy({ breakpoints: [{ width: 420, src: "data-src-small" }], success: function (e) { setTimeout(function () { var t = e.parentNode; t.className = t.className.replace(/\bloading\b/, "") }, 200) } });
+
+/*!
+ * Lazy Load - JavaScript plugin for lazy loading images
+ *
+ * Copyright (c) 2007-2017 Mika Tuupola
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *   https://appelsiini.net/projects/lazyload
+ *
+ * Version: 2.0.0-beta.2
+ *
+ */
+
+(function (root, factory) {
+    if (typeof exports === "object") {
+        module.exports = factory(root);
+    } else if (typeof define === "function" && define.amd) {
+        define([], factory(root));
+    } else {
+        root.LazyLoad = factory(root);
+    }
+}) (typeof global !== "undefined" ? global : this.window || this.global, function (root) {
+
+    "use strict";
+
+    const defaults = {
+        src: "data-src",
+        srcset: "data-srcset",
+        selector: ".lazyload"
+    };
+
+    /**
+    * Merge two or more objects. Returns a new object.
+    * @private
+    * @param {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
+    * @param {Object}   objects  The objects to merge together
+    * @returns {Object}          Merged values of defaults and options
+    */
+    const extend = function ()  {
+
+        let extended = {};
+        let deep = false;
+        let i = 0;
+        let length = arguments.length;
+
+        /* Check if a deep merge */
+        if (Object.prototype.toString.call(arguments[0]) === "[object Boolean]") {
+            deep = arguments[0];
+            i++;
+        }
+
+        /* Merge the object into the extended object */
+        let merge = function (obj) {
+            for (let prop in obj) {
+                if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+                    /* If deep merge and property is an object, merge properties */
+                    if (deep && Object.prototype.toString.call(obj[prop]) === "[object Object]") {
+                        extended[prop] = extend(true, extended[prop], obj[prop]);
+                    } else {
+                        extended[prop] = obj[prop];
+                    }
+                }
+            }
+        };
+
+        /* Loop through each object and conduct a merge */
+        for (; i < length; i++) {
+            let obj = arguments[i];
+            merge(obj);
+        }
+
+        return extended;
+    };
+
+    function LazyLoad(images, options) {
+        this.settings = extend(defaults, options || {});
+        this.images = images || document.querySelectorAll(this.settings.selector);
+        this.observer = null;
+        this.init();
+    }
+
+    LazyLoad.prototype = {
+        init: function() {
+
+            /* Without observers load everything and bail out early. */
+            if (!root.IntersectionObserver) {
+                this.loadImages();
+                return;
+            }
+
+            let self = this;
+            let observerConfig = {
+                root: null,
+                rootMargin: "0px",
+                threshold: [0]
+            };
+
+            this.observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function (entry) {
+                    if (entry.intersectionRatio > 0) {
+                        self.observer.unobserve(entry.target);
+                        let src = entry.target.getAttribute(self.settings.src);
+                        let srcset = entry.target.getAttribute(self.settings.srcset);
+                        if ("img" === entry.target.tagName.toLowerCase()) {
+                            if (src) {
+                                entry.target.src = src;
+                            }
+                            if (srcset) {
+                                entry.target.srcset = srcset;
+                            }
+                        } else {
+                            entry.target.style.backgroundImage = "url(" + src + ")";
+                        }
+                    }
+                });
+            }, observerConfig);
+
+            this.images.forEach(function (image) {
+                self.observer.observe(image);
+            });
+        },
+
+        loadAndDestroy: function () {
+            if (!this.settings) { return; }
+            this.loadImages();
+            this.destroy();
+        },
+
+        loadImages: function () {
+            if (!this.settings) { return; }
+
+            let self = this;
+            this.images.forEach(function (image) {
+                let src = image.getAttribute(self.settings.src);
+                let srcset = image.getAttribute(self.settings.srcset);
+                if ("img" === image.tagName.toLowerCase()) {
+                    if (src) {
+                        image.src = src;
+                    }
+                    if (srcset) {
+                        image.srcset = srcset;
+                    }
+                } else {
+                    image.style.backgroundImage = "url(" + src + ")";
+                }
+            });
+        },
+
+        destroy: function () {
+            if (!this.settings) { return; }
+            this.observer.disconnect();
+            this.settings = null;
+        }
+    };
+
+    root.lazyload = function(images, options) {
+        return new LazyLoad(images, options);
+    };
+
+    if (root.jQuery) {
+        const $ = root.jQuery;
+        $.fn.lazyload = function (options) {
+            options = options || {};
+            options.attribute = options.attribute || "data-src";
+            new LazyLoad($.makeArray(this), options);
+            return this;
+        };
+    }
+
+    return LazyLoad;
+});
+

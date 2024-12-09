@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151320;
+}
+
+div {
+  width: 400px;
+  height: 400px;
+  border: 1px solid white;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+  border-radius: 50%;
+}

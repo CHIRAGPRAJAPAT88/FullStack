@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //  async-await  => replacement of promises
+
+        async function getData() {
+            let res = await fetch('https://jsonplaceholder.typicode.com/posts')
+            let jsonReaponce = await res.json()
+            console.log(jsonReaponce)
+        }
+        getData()
+
+
+
+
+
+
+
+        // example 1
+
+        // async function demo() {
+        //     const promise = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve('hello')
+        //         }, 2000)
+        //     })
+
+        //     const result = await promise
+        //     console.log(result)
+        // }
+
+        // demo()
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "recipe"></div>
+    <script>
+       let dataRecipe = document.getElementById('recipe');
+      async function getData() {
+            let res = await fetch('https://dummyjson.com/recipes')
+            let jsonRes = await res.json()
+            // console.log(jsonRes);
+
+            jsonRes.recipes.forEach((recipe) => {
+                let div = document.createElement('div');
+                div.innerHTML =`
+                <h2>${recipe.id}</h2>
+                <p>${recipe.Name}</p>
+                `
+                dataRecipe.append(div)
+            })
+      }
+      getData()
+    </script>
+</body>
+</html>

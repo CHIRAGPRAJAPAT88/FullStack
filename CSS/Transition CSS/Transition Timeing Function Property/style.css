@@ -1,0 +1,47 @@
+/* .box {
+    width:200px;
+    height: 200px;
+    background-color: aqua;
+    transition: all 2s red;
+} */
+
+/* .box:hover {
+    width: 400px;
+    height: 400px;
+    transition: all 2s ;
+    background-color: red;
+}
+
+.cricle {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.cricle:hover {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 5s;
+    background-color: brown;
+    align-items: center;
+} */
+
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+  }
+  
+  #div1 {transition-timing-function: linear;}
+  #div2 {transition-timing-function: ease;}
+  #div3 {transition-timing-function: ease-in;}
+  #div4 {transition-timing-function: ease-out;}
+  #div5 {transition-timing-function: ease-in-out;}
+  
+  div:hover {
+    width: 300px;
+  }

@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Sans-Serif;
+}
+
+.box1 {
+    width: 70%;
+    height: 37px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.box1 .logo {
+    float: left;
+    color: darkred;
+    font-size: 32px;
+}
+
+.box1 .logo span {
+    color: #f8dbdb;
+    font-size: 32px;
+}
+
+.links {
+    margin-top: 12px;
+    height: 37px;
+    float: right;
+}
+
+.links a {
+    text-decoration: none;
+    padding: 2px 15px;
+    color: red;
+    font-size: 13px;
+}
+
+.box2 {
+    background: red;
+    padding: 12px;
+}
+
+.box2 .heading {
+    margin: auto;
+    width: 70%;
+}
+
+.box2 .heading h1 {
+    color: #f8dbdb;
+    font-size: 32px;
+}
+
+.leftbar {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.leftbar .links2 h3 {
+    color: darkred;
+    margin-left: 0px;
+    width: 150px;
+}
+
+.leftbar .links2 h3 a {
+    text-decoration: none;
+}
+
+.leftbar .links2 ul {
+    list-style: none;
+}
+
+.leftbar .links2 ul li {
+    padding: 5px;
+}
+
+.leftbar .links2 ul li a {
+    color: red;
+    text-decoration: none;
+    padding: 4px 8px 4px 16px;
+}
+
+/* .content {
+  } */
+
+.content h2 {
+    color: darkred;
+}
+
+.content p {
+    color: gray;
+}
+
+.main {
+    background-color: #f8dbdb;
+    color: red;
+    /* display: flex;  */
+    padding: 10px 0;
+}
+
+.main .f {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.main .work1 {
+    margin-left: 25px;
+    float: left;
+    width: 30%;
+}
+
+.main .work1 h2 {
+    color: darkred;
+}
+
+.main .work1 h2 p {
+    color: red;
+}
+
+.f::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.main::after {
+    content: "";
+    clear: both;
+}
+
+#footer {
+    text-align: center;
+    color: red;
+    padding: 20px;
+    clear: both;
+}
+
+#footer a {
+    color: red;
+    text-decoration: none;
+}

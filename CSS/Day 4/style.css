@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.div {
+    width: 100%;
+    height: 100vh;
+    background-color: maroon;
+}
+
+.div p {
+    color: white;
+    text-align: center;
+    font-family: "Righteous", sans-serif;
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+}
+
+.box1 {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.box1 p {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-image: url(business-woman-pointing-side-present-product_1368-30835.jpg); */
+}
+
+.box2 {
+    background-color: aqua;
+    height: 300px;
+    width: 300px;
+}
+.box3 {
+    height: 300px;
+    width: 300px;
+    background: white;
+}
+.box4 {
+    height: 300px;
+    width: 300px;
+    background: white;
+}

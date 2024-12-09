@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Account System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><img src="logo.png" alt="">I<span>C</span>I<span>C</span>I BANK</h1>
+    <!-- container start -->
+    <div class="container">
+        <!-- main start -->
+        <div class="main">
+            <h2>Banking Account</h2>
+        </div>
+        <!-- main end -->
+        <!-- Balance start -->
+        <div class="balance">
+            <h2>Total Amount: ₹<span id="totalAmount">0</span></h2>
+        </div>
+        <!-- Balance end -->
+        <!-- transaction start -->
+        <div class="transactions">
+            <h2>Transaction History</h2>
+            <ul id="transactionHistory"></ul>
+        </div>
+        <!-- transaction end -->
+        <!-- Amonut Deposit and Withdraw start -->
+        <div class="menagement">
+            <input type="number" placeholder="Enter Amount" id="amountInput">
+            <button id="depositBtn">Deposit</button>
+            <button id="withdrawBtn">Withdraw</button>
+        </div>
+        <!-- Amonut Deposit and Withdraw end -->
+    </div>
+    <!-- container end -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

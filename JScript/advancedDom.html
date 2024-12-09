@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dom</title>
+    <style>
+        .a{
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <button>MoveUp</button>
+
+    <script>
+        let h1 = document.createElement("h1");
+        h1.innerHTML =  "Welcome ";
+        h1.className = "a" ;
+        document.body.append(h1);
+        let arr = ["Ram", "Shyam", "Hari", "Sita", "Gita"];
+        let ul = document.createElement("ul");
+        document.body.prepend(ul);
+        for(let i of arr){
+            let li = document.createElement("li");
+            li.innerHTML = i;
+            ul.append(li);
+        }
+
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", function(){
+            document.body.prepend(h1);
+        })
+
+
+          // setInterval => call a function after every x milliseconds   // call a function after a certain intervel(time period)
+
+    // let i = 1;
+    // setInterval(function (){
+    //     document.write(i + "<br>");i++;}, 1000)
+    </script>
+</body>
+</html>

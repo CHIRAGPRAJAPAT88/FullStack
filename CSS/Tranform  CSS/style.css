@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 5px solid black;
+    background-color: green;
+    transform: translate(50px,50px);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // let person = {
+        //     name: 'Ram',
+        //     age: 30
+        // }
+
+        // function hai() {
+        //     console.log(`Hai, my name is ${this.name} and I am ${this.age} years old`);
+        // }
+
+        // hai.apply(person);    
+
+
+        let  numbers = [5, 6, 2, 3, 7];
+
+        let max = Math.max.apply(null, numbers);
+
+        console.log(max);
+        // Expected output: 7
+
+        let min = Math.min.apply(null, numbers);
+
+        console.log(min);
+        // Expected output: 2
+    </script>
+</body>
+
+</html>

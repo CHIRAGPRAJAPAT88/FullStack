@@ -1,0 +1,60 @@
+$(function () {
+    //$(".selectCategory").selectbox();
+});
+$(window).load(function () {
+
+    var lang = document.getElementsByTagName('html')[0].getAttribute('lang');
+    $(".menu").css("border-bottom", "7px solid #ff016e");
+    if(lang=="en"){
+	    $(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/red-logo.png)");
+	    $(".menu > li").mouseout(function () {
+	        $(".menu").css("border-bottom", "7px solid #ff016e");
+	        $(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/red-logo.png)");
+	    });
+	}else  if(lang=="hi"){
+		$(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/red-logo-hi.png)");
+	    $(".menu > li").mouseout(function () {
+	        $(".menu").css("border-bottom", "7px solid #ff016e");
+	        $(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/red-logo-hi.png)");
+	    });
+	}
+    $('.menu a#navabout').addClass('active');
+
+    setTimeout(function () {
+        ($("html").niceScroll({cursorcolor: "#ff016e"}));
+         $($(".menu a[aria-img='red-logo.png']")[1]).addClass('active');
+
+        $(".menu").css("border-bottom", "7px solid #ff016e");
+         if(lang=="en"){
+       		 $(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/red-logo.png)");
+         }else  if(lang=="hi"){
+			$(".deskLogo").css("background-image", "url(/etc/designs/rajasthan-tourism/clientlib-site/img/header/red-logo-hi.png)");
+         }
+    }, 1000);
+
+    $('ul.tabs').each(function () {
+        var $active, $content, $links = $(this).find('a');
+        $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+        $active.addClass('active');
+        $content = $($active[0].hash);
+        $links.not($active).each(function () {
+            $(this.hash).hide();
+        });
+        $(this).on('click', 'a', function (e) {
+            $active.removeClass('active');
+            $content.hide();
+            $active = $(this);
+            $content = $(this.hash);
+            $active.addClass('active');
+            $content.show();
+            e.preventDefault();
+        });
+    });
+});
+
+$(document).ready(function () {
+
+    $("ul.pressList").addClass("listTab");
+
+});
+

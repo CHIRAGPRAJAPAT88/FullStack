@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and hide</title>
+    <style>
+        #show {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        #hide {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <p id="text">Welcome To My Channel</p>
+
+    <script>
+
+        let show = document.getElementById("show");
+        let hide = document.getElementById("hide");
+        let text = document.getElementById("text");
+
+        show.addEventListener("click", function () {
+            text.style.display = "block";
+        });
+
+        hide.addEventListener("click", function () {
+            text.style.display = "none";
+        });
+
+    </script>
+</body>
+</html>

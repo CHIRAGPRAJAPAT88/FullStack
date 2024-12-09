@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ball"></div>
+
+
+    <script>
+        const ball = document.getElementById('ball');
+        let posX = 0; // Initial horizontal position
+        let posY = 0; // Initial vertical position
+        let dx = 2;   // Horizontal speed
+        let dy = 2;   // Vertical speed
+
+        function update() {
+            // Update ball position
+            posX += dx;
+            posY += dy;
+
+            // Get ball dimensions
+            const ballRect = ball.getBoundingClientRect();
+            const ballWidth = ballRect.width;
+            const ballHeight = ballRect.height;
+
+            // Get window dimensions
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            // Check for collision with walls
+            if (posX + ballWidth > windowWidth || posX < 0) {
+                dx = -dx; // Reverse horizontal direction
+            }
+            if (posY + ballHeight > windowHeight || posY < 0) {
+                dy = -dy; // Reverse vertical direction
+            }
+
+            // Set the new position
+            ball.style.left = posX + 'px';
+            ball.style.top = posY + 'px';
+
+            requestAnimationFrame(update); // Call update again for the next frame
+        }
+
+        // Start the animation
+        update();
+
+    </script>
+
+</body>
+
+</html>

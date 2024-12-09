@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    /* position: relative; */
+    /* display: flex;
+    justify-content: center; */
+    /* display: grid; */
+    /* place-items: center; */
+}
+
+.post_card {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex ;
+    margin: auto;
+}
+
+.card1 {
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card1 h1  {
+    margin: 10px;
+}
+
+.card1 p {
+    margin: 10px;
+}
+
+.card2 {
+    width: 300px;
+    height: 100px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 8px  5px inset rgba(0, 0, 0, 0.2), -10px -10px 8px  5px inset rgba(0, 0, 0, 0.2);
+}
+.card2 h1  {
+    margin: 10px;
+}
+
+.card2 p {
+    margin: 10px;
+}
+
+.card3 {
+    width: 300px;
+    height: 100px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.card3 h1  {
+    margin: 10px;
+}
+
+.card3 p {
+    margin: 10px;
+}
+
+.card4 {
+    width: 300px;
+    height: 100px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.card4 h1  {
+    margin: 10px;
+}
+
+.card4 p {
+    margin: 10px;
+}
+
+.card5 {
+    width: 300px;
+    height: 100px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.card5 h1  {
+    margin: 10px;
+}
+
+.card5 p {
+    margin: 10px;
+}
+
+.card6 {
+    width: 300px;
+    height: 100px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.card6 h1  {
+    margin: 10px;
+}
+
+.card6 p {
+    margin: 10px;
+}

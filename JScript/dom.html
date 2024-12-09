@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .y{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p" class="a b c x" title="hello">paragraph <b>bold</b></p>
+    <h1 class="x">hello</h1>
+    <script>
+       let paragraph= document.getElementById("p")
+       let a=document.getElementsByTagName("h1")//collection
+       let b=document.getElementsByClassName("x")//collection
+       let c=document.querySelector(".x")
+       let d=document.querySelectorAll(".x")//node list
+    //console.log(paragraph)
+    // console.log(a[0]);
+    // console.log(b[0]);
+    console.log(c);
+    // console.log(d);
+//accessing and mannipulting text and html
+        // console.log(paragraph.innerText);
+        // console.log(paragraph.innerHTML);
+        // paragraph.innerText="hello"
+        // paragraph.innerHTML='<i>italic</i>'
+        //styles
+        paragraph.style.color='red'
+        //remove hyphen from property name 
+        //change it into camelcase
+        paragraph.style.fontSize='30px'
+        paragraph.style.backgroundColor='yellow'
+        //attributes
+        // console.log(paragraph.getAttribute('id'));
+        // console.log(paragraph.getAttribute('style'));
+        // paragraph.setAttribute('title','welcome')
+        // paragraph.setAttribute('style',"color:red;background-color:yellow")
+        // paragraph.setAttribute('class','y')
+        // paragraph.removeAttribute('class')
+        // console.log(paragraph.hasAttribute('style'));
+        //classes
+        paragraph.classList.add('y')
+        paragraph.classList.remove('a')
+        paragraph.classList.toggle('y')
+        paragraph.classList.toggle('y')
+        console.log(paragraph.classList.contains('z'));
+        //question no. 1
+        // take age from user and if age is more than 18 
+        // show inside a paragraph welcome to site and backgroundColor
+        // green otherwise red or text is not allowed
+        // question no. 2
+        // take a number from user and show it in the paragraph
+        // question no. 3
+        // ask user for their name and show it in the paragraph
+        // question no. 4
+        // ask user a no. and if no. is 
+        // positive => box => green ,positive
+        // negative => box => red ,negative
+        // zero => box => yellow ,zero
+
+
+        
+        
+        
+    </script>
+</body>
+</html>

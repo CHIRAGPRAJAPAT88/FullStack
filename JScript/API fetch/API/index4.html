@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* text-align: center; */
+            background-color: brown;
+        }
+
+        .mobile{
+            width: 500px;
+            height: 250px;
+            background-color: black;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container"></div>
+    <script>
+
+        let dataContainer = document.getElementById('container');
+
+        fetch('https://dummyjson.com/products/search?q=phone')
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                data.products.forEach(value => {
+                    let div = document.createElement('div');
+                    div.className = 'mobile'
+                    div.innerHTML = `
+                <h1>${value.id}</h1>
+                <h1>${value.title}</h1> 
+                <p>${value.description}</p>
+                <h5>${value.category}</h5>`
+                    dataContainer.append(div);
+                });
+            })
+
+    </script>
+</body>
+
+</html>

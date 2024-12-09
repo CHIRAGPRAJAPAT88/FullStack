@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind</title>
+</head>
+<body>
+    
+    <script>
+        // bind  - it is used to bind a function with an object
+
+        let youtube = {
+            name: 'cp_tech',
+            content : 'technology',
+
+            feature: function() {
+                console.log(`My youtube channel is ${this.name} and my content is ${this.content}`);
+            }
+        }
+
+        // youtube.feature();
+
+        let youtube1 = youtube.feature;
+        youtube1();
+
+        // let myYoutube = youtube.feature.bind(youtube);
+        // myYoutube();
+
+        
+
+    </script>
+</body>
+</html>

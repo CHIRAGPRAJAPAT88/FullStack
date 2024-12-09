@@ -1,0 +1,21 @@
+ // let btnStart = document.getElementById('btnStart');
+        // let btnStop = document.getElementById('btnCancel');
+
+        // btnStart.addEventListener('click', start);
+        // btnStop.addEventListener('click', cancel);
+        
+
+        let timer = document.getElementById('timer');
+        let i = 10;
+
+        function countdown() {
+            timer.innerHTML = i;
+            i--;
+
+            if (i >= 0) {
+                setTimeout(countdown, 1000);
+            } else {
+                alert('Countdown Complete');
+            }
+        }
+        countdown()

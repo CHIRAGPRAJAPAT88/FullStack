@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Data</title>
+    <style>
+        .card{
+            width: 500px;
+            height: 400px;
+            background-color: rgb(190, 211, 218);
+            padding-left: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        fetch('https://dummyjson.com/products/1')
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data);
+                let div = document.createElement('div');
+                div.className = 'card'
+                div.innerHTML = `
+                <h1>${data.id}</h1>
+                <h3>${data.brand}</h3> 
+                <h5>${data.category}</h5>
+                <p>${data.description}</p>
+                <img src=${data.images} width="200px" height="200px">`
+                document.body.append(div);
+            })
+
+    </script>
+</body>
+
+</html>

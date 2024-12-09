@@ -1,0 +1,33 @@
+body {
+    background-color:black;
+}
+
+h1 {
+    color: yellowgreen;
+    text-align: center;
+}
+p {
+    font-size: 15px; 
+    font-family: 30px;
+    color: white;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border: 10px solid yellow;
+    padding: 10px;
+    background-color: white;
+}
+
+.box p {
+color: black;
+}
+
+.box2 {
+box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+}

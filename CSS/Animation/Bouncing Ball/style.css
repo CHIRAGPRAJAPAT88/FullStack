@@ -1,0 +1,52 @@
+body{
+    background-color: bisque;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #692020cc;
+    left: 30px;
+    bottom: 0;
+    animation: ball 4s linear infinite  alternate-reverse;
+}
+
+@keyframes ball {
+     15% {
+        bottom: 500px;
+        animation-timing-function: ease-out;
+     }
+     30% {
+        bottom: 0px;
+        animation-timing-function: ease-in;
+     }
+
+     45% {
+        bottom: 400px;
+        animation-timing-function: ease-in;
+     }
+
+     60% {
+        bottom: 0px;
+        animation-timing-function: ease-in;
+     }
+     75% {
+        bottom: 400px;
+        animation-timing-function: ease-in;
+     }
+
+
+     90% {
+        bottom: 0px;  
+        animation-timing-function: ease-in;
+     }
+
+    100% {
+        bottom: 270px;
+        left: 100%;
+        animation-timing-function: ease-out;
+        /* transform: rotate(360deg); */
+     }
+}

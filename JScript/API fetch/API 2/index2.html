@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+</head>
+<body>
+    <h1>Fetch API Example</h1>
+    <div id="content"></div>
+
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                document.getElementById('content').innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        fetchData();
+
+
+        let arrayData = fetch('https://jsonplaceholder.typicode.com/comments');
+        let dataContainer = document.getElementById('container');
+
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.write(data);
+                data.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.innerHTML = ` <h2>${post.title}</h2> <p>${post.body}</p>`;
+                    dataContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brochure Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .brochure {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="brochure">
+        <h1>Our Services</h1>
+        <div id="service-list"></div>
+    </div>
+
+    <script>
+        // Fetch API to get service data
+        fetch('https://jsonplaceholder.typicode.com/comments') // Replace with your API URL
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const serviceList = document.getElementById('service-list');
+                data.forEach(service => {
+                    const serviceItem = document.createElement('div');
+                    serviceItem.innerHTML = `<h2>${service.name}</h2><p>${service.description}</p>`;
+                    serviceList.appendChild(serviceItem);
+                });
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+    </script>
+
+</body>
+</html>
+

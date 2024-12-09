@@ -1,0 +1,12 @@
+CSS (Casecading Style Sheet) 
+
+
+Css 3types uesd :-
+
+1. External Css
+2. Enternal Css
+3. Inline Css
+
+
+float : left | right | both
+clear : left | right | both | none

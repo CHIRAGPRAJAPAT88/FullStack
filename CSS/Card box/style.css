@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main{
+    background-color: whitesmoke;
+    width: 600px;
+    height: 600px;
+    padding: 8px;
+    margin: 50px auto;
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.main .card1 {
+    background-color: white;
+    width:250px;
+    height: 600px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.main .card1 h1 {
+    margin-left: 12px;
+    font-size: 28px;
+}
+
+.main .card1 p {
+    font-size: 20px;
+    line-height: 2.0;
+    margin-left: 12px;
+    color: #8f8484;
+}
+
+.main .card2 {
+    background-color: white;
+    width:250px;
+    height: 600px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.main .card2 h1 {
+    margin-left: 12px;
+    font-size: 28px;
+}
+
+.main .card2 p {
+    font-size: 20px;
+    line-height: 2.0;
+    margin: 12px;
+    color: #8f8484;
+}
+
+.card2 .footer {
+    background-color: #354444;
+    color: white;
+    text-align: start;
+    margin-top: 318px;
+}
+
+.card2 .footer p{
+    color: white;
+    margin-left: 12px;
+    font-size: 20px;
+}
+
+
+.main .card3 {
+    background-color: white;
+    width:250px;
+    height: 600px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.main .card3 h1 {
+    margin-left: 12px;
+    font-size: 28px;
+}
+
+.main .card3 p {
+    font-size: 20px;
+    line-height: 2.0;
+    margin: 10px;
+    color: #8f8484;
+}
+
+
+.card3 .footer {
+    background-color: #354444;
+    color: white;
+    text-align: start;
+    margin-top: 87px;
+}
+
+.card3 .footer p {
+    color: white;
+    margin-left: 12px;
+    font-size: 20px;
+}
+
